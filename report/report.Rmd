@@ -42,7 +42,7 @@ Looking at this table, a RSE of 3.26 on this regression model seems quite large.
 
 In fact we can observe this in our regression diagram shown below:
 
-![Figure 1: Scatterplot with fitted regression line](../images/scatterplot-tv-sales.png)
+![Figure 1: Scatterplot with fitted regression line](../images/scatterplot-tv-sales.png =250x250)
 
 The deviation of the scatterplot from the regression line is quite significant and the spread gets larger as the level of TV ad budget increases.
 
