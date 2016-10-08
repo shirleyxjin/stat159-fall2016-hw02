@@ -9,7 +9,7 @@ date: "Oct. 07, 2016"
 In this report we will reproduce the regression results on sales and advertising effectiveness displayed in section 3.1 Simple Linear Regression (Chapter 3) of the book [**An Introduction to Statistical Learning**](http://www-bcf.usc.edu/~gareth/ISL/).
 
 #Introduction
-The specific goal of this report is to examine the relationship between sales (in terms of thousands of units sold) and advertising budget (in thousands of dollars). We will develop a model that will be used to predict sales on the basis of each of the three media budgets (**TV**, **Radio**, and **Newspaper**). 
+The specific goal of this report is to examine the relationship between sales (in terms of thousands of units sold) and advertising budget (in thousands of dollars). We will develop a model that will be used to predict sales on the basis of each of the three media budgets (**TV**, **Radio**, and **Newspaper**). This examination will allow us to better understand the effectiveness of different methods of advertising on sales.
 
 #Data
 The Advertising data set, downloaded from _**An Introduction to Statistical Learning**_, consists of **Sales** (in thousands of units) of a particular product in 200 different markets, along with advertising budgets (in thousands of dollars) for the product in each of those markets for three different media: TV, Radio, and Newspaper. We will mainly use the **TV** data out of the three different media types.
@@ -23,14 +23,12 @@ To estimate the coefficients $\beta_0$ and $\beta_1$, we will fit a regression m
 
 #Results
 First, we computed the regression coefficients their that relative t values. The results is listed in the table below:
-\end{center}
 ```{r,results = 'asis', echo=FALSE}
 library(xtable)
 load(file = "../data/regression.RData")
 table_coef <- xtable(summary(regression),caption="Information about Regression Coefficients")
 print(table_coef,comment = FALSE)
 ```
-\end{center}
 From this table, we can see that the coefficient for the regression of number of units sold on TV advertising budget indicates that an increase of $1,000 in the TV advertising budget will yield an increase in sales by 47.5 units. This number seems to indicate quite small of an effect. However, the coefficients of $\beta_0$ and $\beta_1$ are both quite large relative to their standard errors, and their t-stats are also quite large. This seems to indicate that $\beta_0$ and $\beta_1$ are significant, and that the null hypothesis that there's no relationship between the TV ad budget and number of units sold can be rejected.
 
 Next, let's look at how well this regression model fits the data. We computed the Regression Quality Indices listed in the table below:
