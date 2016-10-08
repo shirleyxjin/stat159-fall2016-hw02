@@ -1,4 +1,3 @@
-
 ---
 title: "Simple Regression Analysis"
 author: "Shirley Jin"
