@@ -25,12 +25,18 @@ To estimate the coefficients $\beta_0$ and $\beta_1$, we will fit a regression m
 
 #Results
 First, we computed the regression coefficients their that relative t values. The results is listed in the table below:
+
+
 ```{r,results = 'asis', echo=FALSE}
 library(xtable)
 load(file = "../data/regression.RData")
 table_coef <- xtable(summary(regression),caption="Information about Regression Coefficients")
 print(table_coef,comment = FALSE)
 ```
+
+
+
+
 From this table, we can see that the coefficient for the regression of number of units sold on TV advertising budget indicates that an increase of $1,000 in the TV advertising budget will yield an increase in sales by 47.5 units. This number seems to indicate quite small of an effect. However, the coefficients of $\beta_0$ and $\beta_1$ are both quite large relative to their standard errors, and their t-stats are also quite large. This seems to indicate that $\beta_0$ and $\beta_1$ are significant, and that the null hypothesis that there's no relationship between the TV ad budget and number of units sold can be rejected.
 
 Next, let's look at how well this regression model fits the data. We computed the Regression Quality Indices listed in the table below:
