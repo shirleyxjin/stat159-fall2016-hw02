@@ -1,3 +1,4 @@
+
 ---
 title: "Simple Regression Analysis"
 author: "Shirley Jin"
@@ -6,10 +7,13 @@ date: "Oct. 07, 2016"
 
 #Abstract
 In this report we will reproduce the regression results on sales and advertising effectiveness displayed in section 3.1 Simple Linear Regression (Chapter 3) of the book [**An Introduction to Statistical Learning**](http://www-bcf.usc.edu/~gareth/ISL/) authored by Gareth James.
+
 #Introduction
 The specific goal of this report is to examine the relationship between sales (in terms of thousands of units sold) and advertising budget (in thousands of dollars). We will develop a model that will be used to predict sales on the basis of each of the three media budgets (**TV**, **Radio**, and **Newspaper**). This examination will allow us to better understand the effectiveness of different methods of advertising and improve on the advertising strategy to increase the sales of the product.
+
 #Data
 The Advertising data set, downloaded from _**An Introduction to Statistical Learning**_, consists of **Sales** (in thousands of units) of a particular product in 200 different markets, along with advertising budgets (in thousands of dollars) for the product in each of those markets for three different media: TV, Radio, and Newspaper. We will mainly use the **TV** data out of the three different media types.
+
 #Methodology
 For this report, we will only be looking at one media type from the data set, **TV**. We will examine the relationship of **Sales** of this product with **TV** advertising budget. We will use a simple linear model:
 \begin{center}
@@ -18,6 +22,7 @@ For this report, we will only be looking at one media type from the data set, **
 
 \end{center}
 To estimate the coefficients $\beta_0$ and $\beta_1$, we will fit a regression model via the least squares criterion.
+
 #Results
 First, we computed the regression coefficients their that relative t values. The results is listed in the table below:
 ```{r,results = 'asis', echo=FALSE}
