@@ -6,7 +6,7 @@ sink(file = "../data/eda-output.txt")
 summary(advertising)
 sink()
 
-pdf(filename = "../images/histogram-tv.pdf")
+pdf(file = "../images/histogram-tv.pdf")
 hist(advertising$TV, main="Histogram of TV Budgets",xlab= "TV",ylab="Frequency")
 dev.off
 
@@ -14,10 +14,10 @@ png(filename = "../images/histogram-tv.png")
 hist(advertising$TV, main="Histogram of TV Budgets",xlab= "TV",ylab="Frequency")
 dev.off
 
-pdf(filename = "../images/histogram-sales.pdf")
-hist(advertising$TV, main="Histogram of Sales",xlab="Sales",ylab="Frequency")
+pdf(file = "../images/histogram-sales.pdf")
+hist(advertising$Sales, main="Histogram of Sales",xlab="Sales",ylab="Frequency")
 dev.off
 
 png(filename = "../images/histogram-sales.png")
-hist(advertising$TV, main="Histogram of Sales",xlab="Sales",ylab="Frequency")
+hist(advertising$Sales, main="Histogram of Sales",xlab="Sales",ylab="Frequency")
 dev.off
