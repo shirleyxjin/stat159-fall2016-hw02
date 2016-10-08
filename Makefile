@@ -3,7 +3,7 @@
 all: data/eda-output.txt data/regression.Rdata report/report.pdf
 
 data:
-	curl http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv -o data/Advertising.csv
+	curl http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv >> data/Advertising.csv
 
 data/eda-output.txt: data/Advertising.csv code/eda-script.R
 	RScript code/eda-script.R
