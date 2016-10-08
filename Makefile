@@ -1,18 +1,18 @@
-.Phony: all data clean
+.PHONY: all data clean
 
-all: data/eda-output.txt data/regression.Rdata report/report.pdf
+all: eda-output.txt regression.Rdata report.pdf
 
 data:
 	curl http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv >> data/Advertising.csv
 
-data/eda-output.txt: code/eda-script.R data/Advertising.csv
-	RScript code/eda-script.R
-
-data/regression.Rdata: code/regression-script.R data/Advertising.csv
+regression.Rdata: code/regression-script.R data/Advertising.csv
 	RScript code/regression-script.R
 
-report/report.pdf: report/report.Rmd data/regression.RData images/scatterplot-tv-sales.png
-	pandoc report/report.Rmd -s -o Report.pdf
+eda-output.txt: data/Advertising.csv code/eda-script.R
+	RScript code/eda-script.R
+
+report.pdf: report/report.Rmd data/regression.RData images/scatterplot-tv-sales.png
+	Rscript -e "library(rmarkdown); render('report/report.Rmd','pdf_document')"
 
 clean:
 	rm -f report/report.pdf
